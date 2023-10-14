@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db-mysql:
+    build:
+      context: ./db-mysql
+      dockerfile: Dockerfile
+    container_name: db-mysql
+    networks:
+      - mynetwork
+    environment:
+      MYSQL_ROOT_PASSWORD: 1171007
+      MYSQL_DATABASE: prueba
+      MYSQL_USER: victor
